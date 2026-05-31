@@ -170,9 +170,9 @@ const BlogList = () => {
                         <div className="d-flex justify-content-center gap-1">
                           <Link
                             to={
-                              blog.slug && blog.slug !== "undefined"
+                              blog.slug && blog.slug !== 'undefined'
                                 ? `/view/${blog.slug}`
-                                : `/view/${blog._id || blog.id}`
+                                : `/view/${blog._id}`
                             }
                             className="btn btn-sm btn-light text-primary border shadow-sm px-2"
                           >

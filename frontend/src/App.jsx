@@ -26,7 +26,7 @@ function App() {
         <div className="container pb-5">
           <Routes>
             <Route path="/" element={<BlogList />} />
-            <Route path="/view/:identifier" element={<BlogView />} />
+            <Route path="/view/:slug" element={<BlogView />} />
             <Route path="/add" element={<BlogForm />} />
             <Route path="/edit/:id" element={<BlogForm />} />
           </Routes>

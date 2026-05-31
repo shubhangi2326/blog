@@ -4,24 +4,24 @@ import blogService from "../services/blogService";
 import { toast } from "react-toastify";
 
 const BlogView = () => {
-  const { identifier } = useParams();
+  const { slug } = useParams();
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchDetails = async () => {
-      if (!identifier || identifier === "undefined") {
-        console.error("Blog identifier is missing from URL");
+      if (!slug || slug === "undefined") {
+        console.error("Blog slug is missing from URL");
         setLoading(false);
         return;
       }
 
       setLoading(true);
       try {
-        const isObjectId = /^[0-9a-fA-F]{24}$/.test(identifier);
+        const isObjectId = /^[0-9a-fA-F]{24}$/.test(slug);
         const data = isObjectId
-          ? await blogService.getBlogById(identifier)
-          : await blogService.getBlogBySlug(identifier);
+          ? await blogService.getBlogById(slug)
+          : await blogService.getBlogBySlug(slug);
         setBlog(data);
       } catch (error) {
         console.error("Fetch error:", error);
@@ -32,7 +32,7 @@ const BlogView = () => {
     };
 
     fetchDetails();
-  }, [identifier]);
+  }, [slug]);
 
   if (loading) {
     return (

@@ -14,8 +14,8 @@ const router = express.Router();
 router.get('/export', exportCSV);
 router.get('/', getBlogs);
 router.post('/', createBlog);
+router.get('/slug/:slug', getBlogBySlug);
 router.get('/:id', getBlogById);
-router.get('/slug/:slug', getBlogBySlug); 
 
 router.put('/:id', updateBlog);
 router.delete('/:id', deleteBlog);
