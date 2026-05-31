@@ -59,13 +59,14 @@ const blogService = {
         }
     },
 
-   exportToCSV: () => {
+  exportToCSV: () => {
     try {
-        window.open('http://localhost:5000/api/blogs/export');
+        window.open(`${API.defaults.baseURL}/blogs/export`);
     } catch (error) {
         console.error("Error in exportToCSV service:", error);
     }
 }
+
 };
 
 export default blogService;
