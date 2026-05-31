@@ -1,0 +1,186 @@
+:root {
+  --navy: #001f3f;
+  --gold: #D4AF37;
+}
+
+body { background-color: #f4f7f6; font-family: 'Inter', sans-serif; }
+
+.bg-navy { background-color: var(--navy) !important; }
+.text-gold { color: var(--gold) !important; }
+.text-navy { color: var(--navy) !important; }
+
+/* Custom Golden Button */
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--navy);
+  border: 2px solid var(--gold);
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.btn-gold:hover { background-color: transparent; color: var(--gold); }
+
+/* Card & Sections */
+.ui-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border: none;
+    margin-bottom: 20px;
+}
+
+.section-divider {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+/* Status Badges */
+.badge-pub { background: #e6fffa; color: #38b2ac; border-radius: 20px; padding: 5px 12px; }
+.badge-draft { background: #fffaf0; color: #dd6b20; border-radius: 20px; padding: 5px 12px; }
+
+/* Pagination */
+.page-link { color: var(--navy); }
+.page-item.active .page-link { background-color: var(--navy); border-color: var(--navy); color: var(--gold); }
+
+/* Custom Pagination Wrapper */
+.pagination-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Base style for all pagination buttons */
+.pagination-btn {
+    border: none;
+    background-color: #f1f3f5;
+    color: var(--navy);
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 0.85rem;
+}
+
+.pagination-btn:hover:not(:disabled) {
+    background-color: #e9ecef;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Circular style for page numbers */
+.page-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important; /* Forces perfect circle */
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--navy);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Active Page - Navy Background and Gold Text */
+.page-number.active {
+    background-color: var(--navy) !important;
+    color: var(--gold) !important;
+    box-shadow: 0 4px 10px rgba(0, 31, 63, 0.2);
+}
+
+/* Typography and Spacing for View Page */
+.spinner-border.text-navy {
+    color: var(--navy);
+}
+
+.blog-content p {
+    color: #2d3748;
+    text-align: justify;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--navy);
+    color: white;
+    border-color: var(--navy);
+}
+
+/* Shadow for the detail card */
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+/* Badge Gold Overrides */
+.bg-gold {
+    background-color: var(--gold) !important;
+}
+
+/* Form Section Headers */
+.form-section-title {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+}
+
+/* Form Controls */
+.form-control:focus, .form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+}
+
+.img-thumbnail {
+    border: 2px solid var(--gold);
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Professional Card Look */
+.ui-card {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #eef0f2;
+}
+/* Clickable Upload Area Styling */
+.upload-box {
+    border: 2px dashed #cbd5e0;
+    border-radius: 12px;
+    background-color: #f8fafc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 10px;
+}
+
+.upload-box:hover {
+    border-color: var(--navy);
+    background-color: #f1f5f9;
+}
+
+.upload-box img {
+    border: 3px solid var(--gold);
+    padding: 5px;
+    background: white;
+}
+
+/* Section Title Styling */
+.form-section-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
